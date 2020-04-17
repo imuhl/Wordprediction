@@ -2,6 +2,12 @@ library(data.table)
 library(tokenizers)
 library(stopwords)
 
+# get pre-calculated data
+for(n in 1:4) {
+    print(paste0("loading ",n,"grams"))
+    print(system.time(load(file = paste0("dt",n,"gramsCompact.rds"))))
+}
+
 
 # function to predict the next possible words from a given phrase
 wordprediction <- function(phrase) {
@@ -18,7 +24,6 @@ wordprediction <- function(phrase) {
         if(countGrams > 0) {
             result <- grams[1:countGrams]
         }
-        
     }
     if(count >=2) {
         searchPhrase <- paste(words[(count-1):count],collapse=" ")
@@ -39,5 +44,4 @@ wordprediction <- function(phrase) {
     result <- c(result,dt1gramsCompact[[1]])
     result <- unique(result)
     result[1:10]
-    
 }

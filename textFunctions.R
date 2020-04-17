@@ -32,7 +32,7 @@ calculateNGrams <- function(text, n = 3L, stopwords = character(),
     dtNGrams <- dtNGrams[N >= minCount,]
     
     # delete profanity words
-    dtNGrams <- dtNGrams[!dtNGrams[[n]] %in% profanity_alvarez,]
+    dtNGrams <- dtNGrams[!dtNGrams$nGram %in% profanity_alvarez,]
     
     # split ngrams and count occurances, when last word is excluded
     if(n > 1) {

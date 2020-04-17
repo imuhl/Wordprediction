@@ -43,12 +43,11 @@ text <- dtCombined$text
 rm(dtCombined)
 gc()
 
-minCount <- 2
-n <- 3
+minCount <- 3
 
 for(n in 1:4) {
     print(paste0(n,"grams..."))
-    if(n >= 4){
+    if(n >= 4 && minCount == 1){
         minCount <- 2
     }
     
