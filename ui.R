@@ -4,7 +4,11 @@ library(shiny)
 shinyUI(fluidPage(
     
     # Application title
-    titlePanel("Word Predictor"),
+    titlePanel("Coursera Data Science Capstone Project - Word Predictor"),
+    "Author: Ilja Muhl",
+    br(),
+    "Date: 16.04.2020",
+    br(),br(),
     
     # Sidebar with instructions ho to use the app
     sidebarLayout(
