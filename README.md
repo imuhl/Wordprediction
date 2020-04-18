@@ -32,6 +32,6 @@ The Shiny App
 The Links
 ========================================================
 
-- Shiny App: 
+- Shiny App: <https://ilja-muhl.shinyapps.io/WordPrediction/>
 - Code on github: <https://github.com/imuhl/Wordprediction>
 - Coursera Data Science Capstone course: <https://www.coursera.org/learn/data-science-project/home/welcome>
